@@ -1,4 +1,4 @@
-char	ft_toupper(unsigned char c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c = c - 32;

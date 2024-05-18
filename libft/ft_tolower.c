@@ -1,4 +1,4 @@
-char	ft_tolower(unsigned char c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c = c + 32;
