@@ -1,15 +1,12 @@
 char    *ft_strchr(const char *s, int c)
 {
-	unsigned char	a;
-
-	a = c;
 	while (*s != '\0')
 	{
-		if (a == *s)
+		if ((char) c == *s)
 			return ((char *) s);
 		s++;
 	}
-	if (a == '\0')
+	if ((char) c == '\0')
 		return ((char *) s);
 	return (0);
 }
