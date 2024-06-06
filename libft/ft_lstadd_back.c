@@ -2,5 +2,10 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	// will be added.
+	if (new == NULL || lst == NULL)
+		return;
+	if (*lst)
+		ft_lstlast(*lst)->next = new;
+	else
+		*lst = new;
 }
