@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bcelilog <bcelilog@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/17 18:34:32 by bcelilog          #+#    #+#             */
+/*   Updated: 2024/10/22 17:37:15 by bcelilog         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	size_t	count;
 	t_list	*current;
@@ -13,17 +25,4 @@ int		ft_lstsize(t_list *lst)
 		count++;
 	}
 	return (count);
-}
-
-int main()
-{
-    // Örnek bağlı liste düğümleri oluşturma
-    t_list node3 = {"Node 3", NULL};
-    t_list node2 = {"Node 2", &node3};
-    t_list node1 = {"Node 1", &node2};
-
-    // Bağlı listeyi gezme
-    printf("%d",ft_lstsize(&node1));
-
-    return 0;
 }

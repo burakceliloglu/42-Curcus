@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bcelilog <bcelilog@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/17 18:34:02 by bcelilog          #+#    #+#             */
+/*   Updated: 2024/10/22 20:41:08 by bcelilog         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_len(int n)
@@ -17,25 +29,28 @@ static int	ft_len(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*num;
-	int		len;
+	char			*num;
+	int				len;
+	unsigned int	cpy_n;
 
 	len = ft_len(n);
 	num = (char *)malloc(sizeof(char) * (len + 1));
-	if(!num)
+	if (!num)
 		return (NULL);
 	num[len--] = '\0';
 	if (n == 0)
-		num[0] = 0;
+		num[0] = '0';
 	if (n < 0)
 	{
-		n = n * -1;
+		cpy_n = n * -1;
 		num[0] = '-';
 	}
-	while (n) 
+	else
+		cpy_n = n;
+	while (cpy_n)
 	{
-		num[len] = 48 + (n % 10);
-		n = n / 10;
+		num[len] = 48 + (cpy_n % 10);
+		cpy_n = cpy_n / 10;
 		len--;
 	}
 	return (num);

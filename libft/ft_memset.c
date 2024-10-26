@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bcelilog <bcelilog@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/17 18:34:45 by bcelilog          #+#    #+#             */
+/*   Updated: 2024/10/22 17:46:25 by bcelilog         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
@@ -14,12 +26,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-
-#include <stdio.h>
-int	main()
-{
-	char b[30] = "Bilgisayar";
-	ft_memset(b, 'x', 5);
-	printf("%s", b);
-}
-
